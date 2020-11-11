@@ -1,0 +1,277 @@
+/*-------------------------
+  Main elements
+---------------------------*/
+body, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  text-align: center;
+}
+
+header {
+   padding: 32px 0;
+}
+
+main {
+   padding: 25px;
+}
+
+footer {
+   padding: 8px 0;
+}
+
+.switcher-button, .some-text, .some-button, input[type="text"] {
+   transition: all 0.3s ease;
+   -webkit-transition: all 0.3s ease;
+}
+
+.switcher-button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 128px;
+   margin-left: calc(50% - 80px);
+   margin-top: 32px;
+   margin-bottom: 32px;
+   padding: 16px;
+   user-select: none;
+   -webkit-user-select: none;
+   background-color: #E63462;
+   color: #FFF;
+   border: 2px solid #E63462;
+   -webkit-transform: skewX(-21deg);
+   transform: skewX(-21deg);
+}
+
+.switcher-button > span {
+   -webkit-transform: skewX(21deg);
+   transform: skewX(21deg);
+}
+
+.switcher-button:hover {
+   background-color: #FFF;
+   color: #E63462;
+}
+
+.switcher-button:active {
+   border: 2px solid #A63462;
+   color: #A63462;
+}
+
+.some-text {
+   width: 60%;
+   margin: 25px auto;
+   padding: 25px;
+}
+
+.some-button {
+   margin: 10px;
+   padding: 10px 20px;
+   display: inline-block;
+   user-select: none;
+   -webkit-user-select: none;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  padding: 8px;
+  text-align: right;
+}
+
+input[type="text"] {
+   padding: 8px;
+}
+
+input[type="text"]:focus {
+   outline: none;
+}
+
+/*-------------------------
+  Theme specific elements
+---------------------------*/
+
+/*------------------------------------- Theme 1: light*/
+.theme-light {
+  font-family: 'Play';
+}
+
+.theme-light header {
+   background-color: #FFF;
+   border-bottom: 1px solid #BBB;
+}
+
+.theme-light h1, .theme-light h2, .theme-light footer {
+   color: #333745;
+}
+
+.theme-light main {
+   background-color: #F5F5F5;
+}
+
+.theme-light footer {
+   background-color: #FFF;
+}
+
+.theme-light .some-text {
+   background-color: #FFF;
+   border-left: 8px solid #0FA3B1;
+}
+
+.theme-light .some-text b {
+   color: #0FA3B1;
+}
+
+.theme-light .some-button {
+   background-color: #0FA3B1;
+   color: #FFF;
+}
+
+.theme-light .some-button:hover {
+   box-shadow: 0 0 10px 0 #0FA3B1B5;
+}
+
+.theme-light .some-button:active {
+   background-color: #097B86;
+}
+
+.theme-light label {
+   color: #333745;
+}
+
+.theme-light input[type="text"] {
+   font-family: 'Play';
+   border: 1px solid #333745;
+}
+
+.theme-light input[type="text"]:focus {
+   border: 1px solid #0FA3B1;
+   box-shadow: 0 0 5px 0 #0FA3B1B5;
+}
+
+/*------------------------------------- Theme 2: dark*/
+.theme-dark {
+  font-family: 'Open Sans';
+   color: #FFF;
+}
+
+.theme-dark header {
+   background-color: #333745;
+   border-bottom: 0;
+}
+
+.theme-dark main {
+   background-color: #22252E;
+}
+
+.theme-dark footer {
+   background-color: #000;
+}
+
+.theme-dark .some-text {
+   background-color: #333745;
+   border-radius: 8px;
+}
+
+.theme-dark .some-text b {
+   color: #F25757;
+}
+
+.theme-dark .some-button {
+   background-color: #F25757;
+   border-radius: 8px;
+}
+
+.theme-dark .some-button:hover {
+   box-shadow: 0 0 0 5px #F2575765;
+}
+
+.theme-dark .some-button:active {
+   box-shadow: 0 0 0 5px #F2575725;
+}
+
+.theme-dark label {
+   color: #F25757;
+}
+
+.theme-dark input[type="text"] {
+   font-family: 'Open Sans';
+   border: 1px solid #F25757;
+   border-radius: 8px;
+}
+
+.theme-dark input[type="text"]:focus {
+   box-shadow: 0 0 0 5px #F2575765;
+}
+
+/*------------------------------------- Theme 3: other*/
+.theme-other {
+   font-family: 'Lato';
+}
+
+.theme-other header {
+   background-color: #8789C0;
+   color: #FFF;
+   border-bottom: 0;
+}
+
+.theme-other main {
+   background-color: #EFF2EF;
+}
+
+.theme-other footer {
+   background-color: #333745;
+   color: #FFF;
+}
+
+.theme-other .some-text {
+   background-color: #FFF;
+   border-bottom: 8px solid #8789C0;
+}
+
+.theme-other .some-text b {
+   color: #8789C0;
+}
+
+.theme-other .some-button {
+   border: 2px solid #8789C0;
+   color: #8789C0;
+}
+
+.theme-other .some-button:hover {
+   border: 2px solid #C33C54;
+   color: #C33C54;
+}
+
+.theme-other .some-button:active {
+   border: 2px solid #000;
+   color: #000;
+}
+
+.theme-other label {
+   color: #333745;
+}
+
+.theme-other input[type="text"] {
+   font-family: 'Lato';
+   background: none;
+   border-width: 0 0 2px 0;
+   border-style: solid;
+   border-color: #8789C0;
+}
+
+.theme-other input[type="text"]::placeholder {
+   transition: all 0.3s ease;
+   -webkit-transition: all 0.3s ease;
+}
+
+.theme-other input[type="text"]:focus {
+   border-color: #C33C54;
+}
+
+.theme-other input[type="text"]:focus::placeholder {
+   -webkit-transform: translate(-30px,-14px) scale(0.6);
+   transform: translate(-30px,-14px) scale(0.6);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- meta character set -->
+      <meta charset="utf-8">
+      <!-- Always force latest IE rendering engine or request Chrome Frame -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>JS Theme Switcher</title>
+      <!-- Meta Description -->
+      <meta name="description" content="CSS theme switcher using JS">
+      <meta name="author" content="G29740">
+      <!-- Mobile Specific Meta -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+   </head>
+	<body id="body" class="theme-light">
+      <header>
+         <h1>Pure HMTL, CSS, JS theme switcher</h1>
+      </header>
+      <main>
+         <h2>Click the button below to switch to a different theme...</h2>
+         <p class="current-theme">Current theme: [Light]</p>
+         <p class="switcher-button" onclick="changeTheme()"><span>GO ></span></p>
+         <p class="some-text"><u>Some text</u>: Lorem ipsum dolor sit <b>amet, consectetur adipiscing elit</b>. Pellentesque efficitur iaculis sagittis. <i>Nullam semper dui eu magna rutrum, id congue nulla pulvinar. Ut commodo leo et ex auctor, in pulvinar metus faucibus.</i></p>
+         <p class="some-button">Some button</p>
+         <p class="some-textbox"><label for="textbox">Some label:</label> <input type="text" id="textbox" name="textbox" placeholder="Some textbox"></input></p>
+      </main>
+      <footer>
+         <p>2020 - Leye Jin (G29740)</p>
+      </footer>
+      <script>
+         function changeTheme() {
+            var e = document.getElementById("body");
+            switch (e.className) {
+               case "theme-light":
+                  e.className = "theme-dark";
+                  document.getElementsByClassName("current-theme")[0].innerHTML = "Current theme: [Dark]";
+                  break;
+               case "theme-dark":
+                  e.className = "theme-other";
+                  document.getElementsByClassName("current-theme")[0].innerHTML = "Current theme: [Other]";
+                  break;
+               case "theme-other":
+                  e.className = "theme-light";
+                  document.getElementsByClassName("current-theme")[0].innerHTML = "Current theme: [Light]";
+            }
+         }
+      </script>
+	</body>
+</html>
